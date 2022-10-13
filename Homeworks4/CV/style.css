@@ -1,0 +1,106 @@
+
+.header{ 
+    margin-left: 180px;
+}
+.header h2{
+    color: rgb(123, 189, 189);
+}
+.header p {
+    font-size: 20px;
+    color: rgb(196, 216, 216);
+}
+.main .left-bar{
+    float: left;
+  
+    /* height: 800px; */
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+}
+.main .left-bar img{
+    width: 240px;
+    height: 200px;
+    margin: 20px 15px;
+    
+}
+.main .left-bar h4 {
+    margin-left: 37px;
+    padding-top: 10px;
+}
+
+.main .left-bar .ul ul li {
+    list-style-type: square;
+}
+ .main .left-bar ul li {
+  list-style: none;
+    padding-top: 15px;
+ }
+ .main .left-bar h6{
+    font-weight: bold;
+ }
+.main .right-bar{
+    float: right;
+}
+
+.main .right-bar ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+.main .right-bar ul li h3 {
+    font-size: 20px;
+    color: rgb(123, 189, 189);
+   
+}
+
+.main .right-bar .content {
+    height: 120px;
+}
+.main .right-bar .content .left {
+    float: left;
+ 
+}
+.main .right-bar .content .left h5{
+    font-size: 15px;
+    font-weight: bold;
+   
+   
+}
+
+.main .right-bar .content .right {
+    float: right;
+    width: 620px;
+}
+.main .right-bar .content .right h3{
+    font-size: 18px;
+    color: rgb(123, 189, 189);
+}
+.main .right-bar .content .right h6{
+    color: rgb(196, 216, 216);
+}
+.main .right-bar .content-percent {
+    height: 30px;
+}
+
+.main .right-bar .content-percent .left {
+    float: left;
+    width: 250px;
+}
+.main .right-bar .content-percent .left h5{
+    font-size: 13px;
+    margin-left: 30px;
+}
+
+.main .right-bar .content-percent .right {
+    float: right;
+    width: 500px;
+}
+.main .right-bar .content-percent .right h3{
+    font-size: 18px;
+}
+.main .right-bar .content-percent .right .progress{
+
+    margin-right: 140px;
+    height:13px;
+}
+
+
