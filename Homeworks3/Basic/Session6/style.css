@@ -1,0 +1,11 @@
+
+.container {
+    padding-top: 30px;
+}
+.row img{
+    width: 80px;
+    height: 80px;
+}
+.row .card-body {
+    margin-top: 80px;
+}

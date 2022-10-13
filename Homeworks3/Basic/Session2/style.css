@@ -1,0 +1,80 @@
+.header {
+    position: relative;
+  }
+.header {
+    width:700px ;
+    height:400px;
+  }
+  .bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  img { 
+    width:700px ;
+    height:400px;
+    opacity: 1;
+  }
+  .header .bottomleft .left{
+    float: left;
+    margin-left: 30px;
+    margin-top: 50px;
+
+  }
+
+  .header .bottomleft .right{
+    float: right;
+    margin-top: 50px;
+    margin-left: 40px;
+    color: white;
+}
+    .header .bottomleft .right h2{
+        font-size: 35px;  
+    }
+
+    .header .bottomleft .right p{
+        font-size: 20px;
+       
+    }
+  .header .bottomleft img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  
+  }
+  .main{
+    width:700px ;
+    height:50px;
+ 
+    border-bottom-style: solid ;
+    border: 1px solid rgb(238, 231, 232);
+    padding-top: 30px;
+    
+  }
+  .main .trai{
+    float: left;
+    color: rgb(70, 49, 53);
+   
+}
+
+.main .trai span{
+    margin-left: 20px;
+    padding-top: 20px;
+}
+.main .phai{
+    float:right;
+    margin-right: 30px;
+}
+
+
+.main .phai button{
+    background-color: green; 
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 60px;
+    height: 30px;
+
+}

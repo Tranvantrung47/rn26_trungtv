@@ -1,0 +1,80 @@
+
+.container {
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.container .header {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+    border-bottom: 1px solid red;
+}
+.header h1 {
+    padding-bottom: 20px;
+    color: aqua;
+    font-family:'Gill Sans';
+}
+
+.header h5 {
+    font-family:Arial;
+    font-size: 10px;
+}
+.col-xl-3  {
+  border: 1px solid red;
+
+}
+
+.container .eje-x {
+  height: 2.5rem;
+  margin-left: 25px;
+  padding-top: 30px;
+
+}
+
+.container .eje-x li {
+  float: left;
+  text-align: center;
+}
+
+.bar-chart .eje-x li {
+  width: 30px;
+  position: relative;
+  text-align: left;
+  font-size: 10px;
+  list-style: none;
+  height: 10px;
+}
+
+.bar-chart .eje-x li:before {
+  content: '';
+  position: absolute;
+  bottom: 1.3rem;
+  width: 50%;
+
+}
+.bar-chart .eje-x li:nth-child(1):before {
+  background: #E64C65;  
+  height: 300%;
+}
+.bar-chart .eje-x li:nth-child(2):before {
+  background: #11A8AB;  
+  height: 200%;
+}
+.bar-chart .eje-x li:nth-child(3):before {
+  background: #FCB150;  
+  height: 500%;
+}
+.bar-chart .eje-x li:nth-child(4):before {
+  background: #4FC4F6;  
+  height: 700%;
+}
+.bar-chart .eje-x li:nth-child(5):before {
+  background: #FFED0D;  
+  height: 500%;
+}
+
+
+
+
+
