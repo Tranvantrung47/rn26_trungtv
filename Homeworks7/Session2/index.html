@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dãy số Fibonacci</title>
+  </head>
+  <body>
+    <form action="" onsubmit="return false">
+      <label for="">Vui lòng nhập số vào:</label>
+      <input type="text" id="input_number" onchange="check()" /> <br />
+      <br />
+      <input type="button" value="Button" onclick="Fibonacci()" />
+    </form>
+
+    <script>
+      function check() {
+        var x = document.getElementById("input_number").value;
+        if (isNaN(x)) {
+          alert("Vui lòng nhập số");
+        }
+      }
+
+      function Fibonacci() {
+        let number = document.getElementById("input_number").value;
+        let f1 = 0;
+        let f2 = 1;
+        let fn;
+        document.write("Dãy số Fibonacci : ");
+        for (let i = 1; i <= number; i++) {
+          fn = f1 + f2;
+          f1 = f2;
+          f2 = fn;
+
+          if (fn > number) {
+          } else {
+            document.write(f1 + "  "); 
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

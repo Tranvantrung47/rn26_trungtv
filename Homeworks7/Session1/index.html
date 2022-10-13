@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm Tra Số Chẳn Hay Số Lẻ</title>
+</head>
+<body>
+    <h1>Kiểm tra số chẵn lẻ</h1>
+    <form action="" onsubmit="return false">
+        <label for="">Nhập số vào: </label>
+        <input type="text" id="input_number" name="" value="" onchange="check()">
+        <input type="button" onclick="CheckNumber()" value="Button">
+    </form>
+    <script>
+        function check() {
+            var x = document.getElementById("input_number").value
+            if(isNaN(x)){
+                alert("Vui lòng nhập số")
+            }
+        }
+        function CheckNumber(){
+            let Number = document.getElementById("input_number")
+            if (Number.value % 2 == 0) {
+            alert("Số này là số chẵn")
+        } else {
+            alert("Số này là số lẻ")
+        }
+           
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vẽ Tam Giác Vuông</title>
+  </head>
+  <body>
+    <form action="" onsubmit="return false">
+      <label for="">Nhập chiều cao tam giác : </label>
+      <input type="text" id="input_height" onchange="check()" /> <br> <br>
+
+      <input type="button" value="Button" onclick="Height()" />
+    </form>
+    <script>
+      //var n = parseInt(prompt("Nhap gia tri n"));
+      function check() {
+        var x = document.getElementById("input_height").value;
+        if (isNaN(x)) {
+          alert("Vui lòng nhập số");
+        }
+      }   
+
+      function Height() {
+        var n = document.getElementById("input_height").value;
+        for (i = 0; i < n; i++) {
+          for (j = 0; j <= i; j++) {
+            document.writeln("*");
+          }
+          document.writeln("<br/>");
+        }
+
+        for (i = n; i >= 0; i--) {
+          for (j = 0; j <= i; j++) {
+            document.writeln("*");
+          }
+          document.writeln("<br/>");
+        }
+      }
+    </script>
+  </body>
+</html>
