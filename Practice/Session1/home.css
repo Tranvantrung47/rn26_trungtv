@@ -1,0 +1,84 @@
+ .header {
+  height: 50px;
+  background-color: bisque;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+.item {
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.item:hover{
+  color: red;
+}
+.main {
+  height: 500px;
+}
+
+.main h2 {
+  font-size: 25px;
+}
+
+.row {
+  padding-top: 20px;
+}
+
+.left ul li {
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid pink;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.right {
+  height: 280px;
+  background-color: pink;
+  padding: 30px 10px;
+}
+
+.right h2 {
+  font-size: 22px;
+}
+
+.one {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.crossed {
+  width: 200px;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) calc(50% - 1px),
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) calc(50% + 1px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+
+.footer {
+    background-color: bisque;
+    margin-top: 50px;
+    height: 60px;
+}
+.footer p {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 10px;
+    text-align: center;
+}
+

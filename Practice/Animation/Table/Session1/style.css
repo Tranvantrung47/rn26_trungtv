@@ -1,0 +1,16 @@
+table,  th, td {
+                border: 1px solid;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+
+.crossed {
+    width: 200px;
+    background-image: 
+        linear-gradient(to top left,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 1px),
+            rgba(0,0,0,1) 50%,
+            rgba(0,0,0,0) calc(50% + 1px),
+            rgba(0,0,0,0) 100%);
+}

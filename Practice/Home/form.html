@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <title>Form</title>
+    <style>
+        .header {
+                font-family: Arial, Helvetica, sans-serif;
+                 padding-top: 20px;
+                 padding-left: 30px;
+                 color: rgb(146, 132, 112);
+                background-color: bisque;
+                height: 80px;
+                animation-timing-function: linear;
+                font-weight: bold;
+                position: relative;
+                animation: mymove 3s infinite;
+                }
+        .main {
+                height: 500px;
+                padding-top: 50px;
+                padding-left: 50px;
+                }
+        .footter p {
+                text-align: center;
+                padding: 20px 0px;
+                font-size: 10px;
+                text-align: center;
+                    }
+        .footter {
+                background-color: bisque;
+                margin-top: 50px;
+                height: 60px;
+                }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./list.html">User List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./form.html">User Form</a>
+            </li>
+          </ul>
+    </div>
+    <div class="main" style="width:540px">
+        <form id = "myForm" onsubmit="return false">
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_email" placeholder="Email">
+                <p>Vui lòng nhập Email</p>
+              </div>
+              
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="input_password" placeholder="Password">
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Phone Number</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="input_phone" placeholder="Phone">
+                </div>
+              </div>
+            <input type="checkbox" name="" id="">
+            <label for="">Remember</label> <br> 
+
+            <input type="button" onclick="handleSubmit()" name="" id="" value="Submit">
+            <input type="button"  onClick = "btn()" name="" id="" value="Reset" style="background-color:blue ; border:1px;border-radius:5px">
+          </form>
+    </div>
+
+    <div class="footter">
+        <p>&#169; This web page is a part of a demonstration of fluid web design made by www.w3schools.com. Resize the browser window to see the content response to the resizing</p>
+    </div>
+
+    <script>
+        // function btn(){
+        //   document.getElementById("myForm").reset();
+        // } 
+        function handleSubmit(){
+          let valueEmail = document.getElementById("input_email")
+          confirm("email vua nhap la: "+valueEmail.value)
+
+          let valuepassword = document.getElementById("input_password")
+          confirm("password vua nhap la: " +valuepassword.value)
+
+          let valuephone = document.getElementById("input_phone")
+          confirm("phone vua nhap la: "+valuephone.value)
+        }
+
+
+        function btn(){
+          document.getElementById("input_email").value = ""
+          document.getElementById("input_password").value = ""
+
+        }
+       </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

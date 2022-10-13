@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+</head>
+<body>
+   
+    <table>
+        <tbody>
+            <tr>
+                <th class="w20p">Thuộc tính</th>
+                <th class="w20p">giá trị</th>
+                <th class="w25p">Ví dụ</th>
+                <th class="crossed"></th>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor01" target="_blank">animation-name</a></td>
+                <td>tên animation</td>
+                <td>animation-name: myAnimation;</td>
+                <td>Xác định tên cho một animation.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor02" target="_blank">animation-duration</a></td>
+                <td>thời gian</td>
+                <td>animation-duration: 5s;</td>
+                <td>Xác định thời gian để hoàn thành một chuyển động, mặc định là 0s.</td>
+            </tr>
+            <tr>
+                <td rowspan="6"><a href="example/ex_animation_css3.php#anchor03"
+                        target="_blank">animation-timing-function</a></td>
+                <td><a href="example/ex_animation_css3.php#anchor03" target="_blank">linear</a></td>
+                <td>animation-timing-function: linear;</td>
+                <td>Chuyển động sẽ cùng tốc độ từ lúc bắt đầu tới lúc kết thúc.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor04" target="_blank">ease</a></td>
+                <td>animation-timing-function: ease;</td>
+                <td>Chuyển động ban đầu sẽ chậm, sau đó nhanh,
+                     đến lúc kết thúc sẽ từ từ, đây là dạng mặc định.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor05" target="_blank">ease-in</a></td>
+                <td>animation-timing-function: ease-in;</td>
+                <td>Chuyển động ban đầu sẽ chậm, sau đó nhanh dần.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor06" target="_blank">ease-out</a></td>
+                <td>animation-timing-function: ease-out;</td>
+                <td>Chuyển động ban đầu sẽ nhanh, sau đó sẽ chậm dần.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor07" target="_blank">ease-in-out</a></td>
+                <td>animation-timing-function: ease-in-out;</td>
+                <td>Chuyển động ban đầu chậm, sau đó nhanh, đến lúc kết thúc sẽ chậm dần.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor08" target="_blank">cubic-bezier(n,n,n,n)</a></td>
+                <td>animation-timing-function: cubic-bezier(1,1,1,0);</td>
+                <td>Xác định giá trị riêng cho chuyển động, giá trị sẽ từ 0 tới 1.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor09" target="_blank">animation-delay</a></td>
+                <td>thời gian</td>
+                <td>animation-delay: 3s;</td>
+                <td>Xác định sau bao lâu thì chuyển động sẽ bắt đầu, mặc định sẽ là 0</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><a href="example/ex_animation_css3.php#anchor10"
+                        target="_blank">animation-iteration-count</a></td>
+                <td><a href="example/ex_animation_css3.php#anchor10" target="_blank">số tự nhiên</a></td>
+                <td>animation-iteration-count: 4;</td>
+                <td>Xác định số lần thực hiện chuyển động.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor11" target="_blank">infinite</a></td>
+                <td>animation-iteration-count: infinite;</td>
+                <td>Chuyển động sẽ thực hiện không giới hạn số lần.</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><a href="example/ex_animation_css3.php#anchor12" target="_blank">animation-direction</a>
+                </td>
+                <td>normal</td>
+                <td>animation-direction: normal;</td>
+                <td>Chuyển động bình thường, đây là dạng mặc định.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor12" target="_blank">alternate</a></td>
+                <td>animation-direction: alternate;</td>
+                <td>Chuyển động sẽ được đảo ngược ở chu kỳ tiếp theo.</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><a href="example/ex_animation_css3.php#anchor13"
+                        target="_blank">animation-play-state</a></td>
+                <td><a href="example/ex_animation_css3.php#anchor13" target="_blank">paused</a></td>
+                <td>animation-play-state: paused;</td>
+                <td>Xác định chuyển động dừng lại.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor13" target="_blank">running</a></td>
+                <td>animation-play-state: running;</td>
+                <td>Xác định chuyển động chạy.</td>
+            </tr>
+            <tr>
+                <td><a href="example/ex_animation_css3.php#anchor15" target="_blank">animation</a></td>
+                <td>[name] [duration] [timing] [delay] [interaction-count] [direction]</td>
+                <td>animation: myAnimation 5s linear 3s infinite alternate;</td>
+                <td>Đây là dạng tổng hợp của các thuộc tính trên, ngoại trừ thuộc tính animation-play-state.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

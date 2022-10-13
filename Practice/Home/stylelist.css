@@ -1,0 +1,39 @@
+tr:nth-child(even) {
+  background-color: rgb(20, 20, 18);
+}
+tr:nth-child(odd) {
+  background-color: rgb(32, 41, 32);
+}
+
+.footter {
+  background-color: bisque;
+  margin-top: 50px;
+  height: 60px;
+}
+.footter p {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 10px;
+  text-align: center;
+}
+.main {
+  margin: auto;
+  width: 50%;
+  padding-top: 50px;
+}
+
+.header {
+  height: 200px;
+}
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: rgb(146, 132, 112);
+    background-color: bisque;
+    height: 80px;
+    animation-timing-function: linear;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 3s infinite;
+}
