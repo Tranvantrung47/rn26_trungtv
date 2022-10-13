@@ -28,14 +28,17 @@
         let f2 = 1;
         let fn;
         document.write("Dãy số Fibonacci : ");
-        for (let i = 1; i <= number; i++) {
-          fn = f1 + f2;
-          f1 = f2;
-          f2 = fn;
-
+        for (i = 0; i < number; i++) {
+          if (i <= 1) {
+            fn = i;
+          } else {
+            fn = f1 + f2;
+            f1 = f2;
+            f2 = fn;
+          }
           if (fn > number) {
           } else {
-            document.write(f1 + "  "); 
+          document.write(fn + "  ");
           }
         }
       }
