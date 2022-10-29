@@ -11,23 +11,24 @@
       <label for="">Vui lòng nhập số vào:</label>
       <input type="text" id="input_number" onchange="check()" /> <br />
       <br />
-      <input type="button" value="Button" onclick="Fibonacci()" />
+      <input type="button" value="Button" onclick="fibonacci()" />
     </form>
 
     <script>
       function check() {
-        var x = document.getElementById("input_number").value;
+        let x = document.getElementById("input_number").value;
         if (isNaN(x)) {
           alert("Vui lòng nhập số");
         }
       }
 
-      function Fibonacci() {
+      function fibonacci() {
         let number = document.getElementById("input_number").value;
         let f1 = 0;
         let f2 = 1;
         let fn;
         document.write("Dãy số Fibonacci : ");
+
         for (i = 0; i < number; i++) {
           if (i <= 1) {
             fn = i;
@@ -38,7 +39,7 @@
           }
           if (fn > number) {
           } else {
-          document.write(fn + "  ");
+            document.write(fn + "  ");
           }
         }
       }

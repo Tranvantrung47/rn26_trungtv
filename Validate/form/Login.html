@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Đăng Nhập</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JQUERY VALDATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <!-- Validate file -->
+  </head>
+  <body>
+    <div class="auth-form">
+      <div class="auth-form__container">
+        <div class="auth-form__header">
+          <h3 class="auth-form__heading">Đăng nhập</h3>
+          <a href="./Register.html" class="auth-form__switch-btn">Đăng ký</a>
+          <!-- <span class="auth-form__switch-btn">Đăng ký</span> -->
+        </div>
+
+        <form id="FormLogin" onsubmit="return false">
+          <div class="auth-form__form">
+            <div class="auth-form__group">
+              <input
+                type="text"
+                class="auth-form__input"
+                name="email"
+                id="input__email"
+                placeholder="Email của bạn"
+              />
+            </div>
+            <div class="auth-form__group">
+              <input
+                type="password"
+                class="auth-form__input"
+                name="matkhau"
+                id="input__password"
+                placeholder="Mật khẩu của bạn"
+              />
+              <br />
+              <br />
+              <input type="checkbox" onclick="myFunction()" />Show Password
+            </div>
+          </div>
+          <div class="auth-form__aside">
+            <p class="auth-form__help">
+              <a href="" class="auth-form__help-link auth-form__help-forgot"
+                >Quên mật khẩu</a
+              >
+              <span class="auth-form__help-separate"></span>
+              <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+            </p>
+          </div>
+
+          <div class="auth-form__controls">
+            <button class="btn btn-normal auth-form__controls-back">
+              TRỞ LẠI
+            </button>
+            <button class="btn btn--primary" onclick="handleSubmit()">
+              ĐĂNG NHẬP
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="auth-form__socials">
+        <a
+          href=""
+          class="auth-form__socials--facebook btn btn--size-s btn--with-icon"
+        >
+          <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+          <span class="auth-form__socials-title"> Kết nối với Facebook</span>
+        </a>
+        <a
+          href=""
+          class="auth-form__socials--google btn btn--size-s btn--with-icon"
+        >
+          <i class="auth-form__socials-icon fab fa-google"></i>
+          <span class="auth-form__socials-title"> Kết nối với Google</span>
+        </a>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+
+      var settings = {
+        rules: {
+          email: {
+            required: true,
+            minlength: 6,
+            maxlength: 20,
+          },
+          matkhau: {
+            required: true,
+            minlength: 6,
+            maxlength: 12,
+          },
+        },
+        messages: {
+          email: {
+            required: "Bạn chưa nhập email",
+            minlength: "Tối thiểu có {0} ký tự",
+          },
+          matkhau: {
+            required: "Bạn chưa nhập mật khẩu",
+            minlength: "Tối thiểu có {0} ký tự",
+          },
+        },
+      };
+
+      var validator = $("#FormLogin").validate(settings);
+
+      function handleSubmit() {
+        let email = document.getElementById("input__email").value
+        document.write("email là: "+email);
+      }
+    </script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script> -->
+  </body>
+</html>

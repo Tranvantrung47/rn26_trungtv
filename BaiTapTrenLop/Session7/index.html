@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển đổi xâu</title>
+  </head>
+  <body>
+    <script>
+      let string = "How arE you TOday";
+      let sentence = string.toLowerCase().split(" ");
+
+      for (var i = 0; i < sentence.length; i++) {
+        sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+      }
+
+      let result = sentence.join(" ");
+      document.write(result);
+    </script>
+
+    
+  </body>
+</html>

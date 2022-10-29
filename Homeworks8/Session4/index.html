@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính tổng các chữ số</title>
+  </head>
+  <body>
+    <script>
+    //   let n = 954
+    //   let donvi
+    //   let tong = 0
+
+    //     while(n > 0){
+    //     donvi = n % 10
+    //     n = n/10
+    //     tong = tong + donvi
+    //     }
+    //   console.log(tong);
+
+    let n = 16;
+    let soDu;
+    let tong = 0;
+	    while (n > 0) {
+	        soDu = n % 10;
+	        n = n / 10;
+	        tong += soDu;
+	    }
+	         
+	    document.write("Tổng các chữ số = " +parseInt(tong));
+    </script>
+  </body>
+</html>

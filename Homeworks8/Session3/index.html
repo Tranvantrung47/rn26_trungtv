@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [5, 4, 7, 2, 8, 12, 7, 3];
+
+      /*Sắp xếp mảng số theo thứ tự tăng dần*/
+      array.sort(function (a, b) {
+        return a - b;
+      });
+      n = 2;
+      document.write(n,"<br>")
+      document.write(array, "<br>")
+      document.write("Lớn thứ " + n + " = ", array[array.length - n]);
+    </script>
+  </body>
+</html>

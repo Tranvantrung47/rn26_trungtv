@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header></header>
+    <!-- <iframe class="w-100" style="height: 70px;" src="./header.html" seamless></iframe> -->
+    <form class="w-50 m-auto mt-3" onsubmit="return false;">
+        <div class="mb-3">
+            <label for="input__email" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="input__email" aria-describedby="emailHelp"
+                onblur="console.log('onblur',this.value)">
+            <div id="error__email" class="form-text text-danger"></div>
+        </div>
+        <div class="mb-3">
+            <label for="input__password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="input__password"
+                onchange="console.log('onchange',this.value)">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="input__checkbox">
+            <label class="form-check-label" for="input__checkbox">Remember</label>
+        </div>
+
+        <button type="reset" class="btn btn-primary">Reset</button>
+        <button onclick="handleSubmit(this)" class="btn btn-success">Submit</button>
+        <button onclick="handleReset()" class="btn btn-secondary">Reset DOM</button>
+    </form>
+    <footer></footer>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script>
+        function handleReset() {
+            let elementInputEmail = document.getElementById('input__email');
+            let elementInputPassword = document.getElementById('input__password');
+            let elementInputCheckBox = document.getElementById('input__checkbox');
+            if (elementInputEmail) {
+                elementInputEmail.value = '';
+            }
+            if (elementInputCheckBox) {
+                elementInputCheckBox.checked = false;
+            }
+        }
+
+        function handleSubmit(event) {
+            let elementInputEmail = document.getElementById('input__email');
+            let elementInputPassword = document.getElementById('input__password');
+            let elementInputCheckBox = document.getElementById('input__checkbox');
+            
+            let objectUser = {
+                name: elementInputEmail?.value,
+                // avatar:
+                //     "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/254.jpg",
+            }
+            // console.log(objectUser);
+            postData(objectUser)
+            return false;
+        }
+        function postData(user) {
+            fetch("https://63284e93a2e90dab7bdd0fd7.mockapi.io/api/v1/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            })
+                .then((response) => response.json())
+                .then((res) => console.log(res))
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+    </script>
+</body>
+
+</html>

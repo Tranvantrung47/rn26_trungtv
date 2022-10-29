@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.2.1-dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header></header>
+
+    <form class="form" onsubmit="return false">
+      <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+      <p>
+        <label>Tên truy cập (*):</label> <br />
+        <input
+          name="name"
+          id="input__name"
+          value=""
+          type="text"
+          onblur="console.log('onblur',this.value)"
+        />
+      </p>
+
+      <p>
+        <label>Tuổi (*):</label> <br />
+        <input name="age" id="input__age" value="" type="text" />
+      </p>
+      <p>
+        <label>Địa chỉ (*):</label> <br />
+        <input name="address" id="input__address" value="" type="text" />
+      </p>
+      <p></p>
+      <p>
+        <input
+          type="submit"
+          onclick="handleSubmit(this)"
+          name="submit"
+          value="UPDATE"
+        />
+        <input type="reset" name="reset" value="RESET" />
+      </p>
+    </form>
+    <footer></footer>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script>
+      window.onload = function () {
+        let id = getIdUrl();
+        console.log(id);
+
+        let person = {
+          id: "1",
+          name: "Trung",
+          age: 25,
+          address: "Đà Nẵng",
+        };
+        document.getElementById("input__name").value = person.name;
+        document.getElementById("input__age").value = person.age;
+        document.getElementById("input__address").value = person.address;
+        document.getElementById("btn__submit").textContent = "Update";
+      };
+      function getIdUrl() {
+        let url = new URL(window.location.href);
+        let id = url.searchParams.get("id");
+        return id;
+      }
+      // function handleReset() {
+      //     let elementInputEmail = document.getElementById('input__email');
+      //     let elementInputPassword = document.getElementById('input__password');
+      //     let elementInputCheckBox = document.getElementById('input__checkbox');
+      //     if (elementInputEmail) {
+      //         elementInputEmail.value = '';
+      //     }
+      //     if (elementInputCheckBox) {
+      //         elementInputCheckBox.checked = false;
+      //     }
+      // }
+
+      function handleSubmit(event) {
+
+        let elementInputName = document.getElementById("input__name");
+        let elementInputAge = document.getElementById("input__age");
+        let elementInputAddress = document.getElementById("input__address");
+
+        let objectUser = {
+          name: elementInputName?.value,
+          age: elementInputAge?.value,
+          address: elementInputAddress?.value,
+        };
+
+        postData(objectUser);
+        return false;
+      }
+
+      function postData(user) {
+        fetch("https://634ea20a4af5fdff3a62aa66.mockapi.io/Ex/api/v1/person/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((response) => response.json())
+          .then((res) => console.log(res))
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+
+    <script>
+      		$(document).ready(function(){
+				$('.form').validate({
+					rules:{
+						"name":{
+							required:true,
+							minlength:6,
+   						maxlength:32,
+							
+						},
+						 "age" :{
+     						required:true,
+ 						 },
+ 						 "address":{
+              required:true,
+							minlength:6,
+   						maxlength:32,
+ 						 },
+ 						
+
+					},
+					messages:{
+						"name":{
+							required:"Vui lòng nhập username",
+							minlength:"Vui lòng nhập trên 6 kí tự",
+    						maxlength:"Vui lòng nhập dưới 32 kí tự",
+							},
+						 "age" :{
+   							required:" Vui lòng nhập tuổi",			
+   							 },
+   						"address":{
+ 						 	required:" Vui lòng nhập địa chỉ",
+ 						 },
+ 						
+					},
+						
+				});
+			});
+    </script>
+  </body>
+</html>

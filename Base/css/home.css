@@ -1,0 +1,27 @@
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+td.crossed {
+    background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), black, transparent calc(50% + 1px));
+}
+
+.item {
+    border-bottom: 1px solid #ccc;
+}
+
+.bg__ccc {
+    background-color: #ccc;
+}
+
+.text__white {
+    color: white;
+}
+
+.div__container{
+    min-height: 100vh;
+}

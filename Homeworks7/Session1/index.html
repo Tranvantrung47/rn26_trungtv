@@ -11,18 +11,18 @@
     <form action="" onsubmit="return false">
         <label for="">Nhập số vào: </label>
         <input type="text" id="input_number" name="" value="" onchange="check()">
-        <input type="button" onclick="CheckNumber()" value="Kiểm Tra">
+        <input type="button" onclick="checkNumber()" value="Kiểm Tra">
     </form>
     <script>
         function check() {
-            var x = document.getElementById("input_number").value
+            let x = document.getElementById("input_number").value
             if(isNaN(x)){
                 alert("Vui lòng nhập số")
             }
         }
-        function CheckNumber(){
-            let Number = document.getElementById("input_number")
-            if (Number.value % 2 == 0) {
+        function checkNumber(){
+            let number = document.getElementById("input_number")
+            if (number.value % 2 == 0) {
             alert("Số này là số Chẵn")
         } else {
             alert("Số này là số Lẻ")

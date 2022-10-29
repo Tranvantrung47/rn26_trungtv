@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Form đăng ký thành viên</title>
+	<link rel="stylesheet" type="text/css" href="./asssets/style.css" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script> -->
+    <script src="./Jquery/jquery.min.js"></script>
+    <script src="./Jquery/jquery.validate.min.js"></script>
+</head>
+<body>
+	<form class="form">
+		<h2>ĐĂNG KÝ THÀNH VIÊN</h2>	
+		<p>
+			<label>Tên truy cập (*):</label>
+			<input name="username" id="input_email" value="" type="text" placeholder="Choose your username" />
+		</p>
+		<p>
+			<label>Mật khẩu (*):</label>
+			<input name="password" id="password" value="" type="password" placeholder="Creat a new password" />
+		</p>
+		<p>
+			<label>Xác nhận mật khẩu (*):</label>
+			<input name="repassword" value="" type="password" placeholder="Confirm your password" />
+		</p>
+		<p>
+			<label>Họ và tên (*):</label>
+			<input name="fullname" value="" type="text" placeholder="Write your name here.." />
+		</p>
+		<p>
+			<label>Sinh nhật (*):</label>
+			<input name="birthday" value="" type="text" placeholder="Tell us your birthday" />
+		</p>
+		<p>
+			<label>Giới tính (*):</label>
+			<p>
+				Nam</span><input type="radio" value="nam" name="gioitinh" />
+				Nữ</span><input type="radio" value="nu" name="gioitinh" />
+			</p>
+		</p>
+		<p>
+			<label>Địa chỉ (*):</label>
+			<select name="city">
+				<option value="">--[Chọn]--</option>
+				<option value="danang">Đà Nẵng</option>
+				<option value="hochiminh">Hồ Chí Minh</option>
+				<option value="hanoi">Hà Nội</option>
+			</select>
+		</p>
+		<p>
+			<label>Số điện thoại:</label>
+			<input name="phone" value="" type="text" placeholder="Enter your phone number.." />
+		</p>
+		<p>
+			<label>Email (*):</label>
+			<input name="email" value="" type="text" placeholder="Let us know how to contact you back.." />
+		</p>
+		<p>
+			<label>Facebook:</label>
+			<input name="facebook" value="" type="text" placeholder="Enter your facebook profile" />
+		</p>
+		<p>
+			<input type="submit" onclick="handsubmit()" name="submit" value="ĐĂNG KÝ" />
+			<input type="reset" name="reset" value="RESET" />
+		</p>
+		
+	</form>
+	<script>
+		$(document).ready(function(){
+				$('.form').validate({
+					rules:{
+						"username":{
+							required:true,
+							minlength:6,
+   							maxlength:32,
+							
+						},
+						 "password" :{
+     						required:true,
+    						minlength:6,
+
+ 						 },
+ 						 "repassword":{
+ 						 	required:true,
+ 						 	equalTo:"#password",
+
+ 						 	
+ 						 },
+ 						 "fullname":{
+ 						 		required:true,
+ 						 },
+ 						 "birthday":{
+ 						 	 required: true,
+     						 date: true
+ 						 },
+ 						 "phone":{
+ 						 	required: true,
+     						number: true
+ 						 },
+ 						 "email":{
+ 						 	 required: true,
+      						 email: true
+ 						 },
+ 						 "facebook":{
+ 						 	 required: true,
+      						 url: true
+ 						 },
+ 						 "gioitinh":{
+ 						 	required: true,
+ 						 },
+ 						  "city":{
+ 						 	required: true,
+ 						 },
+ 						
+
+					},
+					messages:{
+						"username":{
+							required:"Vui lòng nhập username",
+							minlength:"Vui lòng nhập trên 6 kí tự",
+    						maxlength:"Vui lòng nhập dưới 32 kí tự",
+							},
+						 "password" :{
+   							required:" Vui lòng nhập mật khẩu",
+     						minlength:"Vui lòng nhập trên 6 kí tự",
+   							 },
+   						"repassword":{
+ 						 	required:" Vui lòng xác nhận lại mật khẩu",
+
+
+
+ 						 },
+ 						 "fullname":{
+ 						 		required:" Vui lòng nhập tên"
+ 						 },
+ 						 "birthday":{
+ 						 	 required: " Vui lòng nhập ngày sinh",
+     						 date: "Vui lòng nhập đúng Năm/Tháng/Ngày",
+
+ 						 },
+ 						 "phone":{
+ 						 	required: " Vui lòng nhập số điện thoại",
+     						number:"Vui lòng nhập đúng số"
+ 						 },
+ 						 "email":{
+ 						 	 required: " Vui lòng nhập email",
+      						 
+ 						 },
+ 						 "facebook":{
+ 						 	 required:" Vui lòng nhập facebook",
+      						 url: "Vui lòng nhập đúng url Facebook"
+ 						 },
+
+ 						  "gioitinh":{
+ 						 	required: " Vui lòng chọn giới tính",
+ 						 },
+ 						  "city":{
+ 						 	required: "Vui lòng chọn địa chỉ",
+ 						 },
+					},
+						
+				});
+			});
+            function handsubmit() {
+                let email = document.getElementById("input_email").value
+                console.log(email);
+            }
+	</script>
+    
+</body>
+</html>
